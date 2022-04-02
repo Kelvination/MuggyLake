@@ -139,9 +139,16 @@ public class PlayerCameraController : MonoBehaviour
             }
         }
 
+        var chasingEnemy = GameObject.FindGameObjectWithTag("ChasingEnemy");
+
+        if (chasingEnemy.gameObject.GetComponent<EnemyAI>().isChasing)
+        {
+            beingChased = true;
+        }
 
 
-        if(beingChased)
+
+        if (beingChased)
         {
             GameObject camera = GameObject.FindGameObjectWithTag("ChaseMusic");
             camera.GetComponent<AudioSource>().volume = 0.17f;

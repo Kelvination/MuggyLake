@@ -175,6 +175,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         isDead = true;
+        PauseGame();
     }
     
     public void PauseGame()

@@ -16,7 +16,7 @@ public class SettingsMenu : MonoBehaviour
     private float musicVolume;
     private bool isFullscreen;
 
-    private void Start()
+    private void Awake()
     {
         LoadSettings();
     }
@@ -50,6 +50,10 @@ public class SettingsMenu : MonoBehaviour
         effectsSlider.value = effectsVolume;
         musicSlider.value = musicVolume;
         fullscreenToggle.isOn = isFullscreen;
+
+        mixer.SetFloat("effects", effectsVolume);
+        mixer.SetFloat("music", musicVolume);
+        Screen.fullScreenMode = isFullscreen ? FullScreenMode.ExclusiveFullScreen : FullScreenMode.Windowed;
     }
 
     public void SaveChanges()

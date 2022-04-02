@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
+
 public class MainMenu : MonoBehaviour
 {
     public SettingsMenu settings;
@@ -20,4 +23,5 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    
 }
