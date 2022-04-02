@@ -25,4 +25,4 @@ public class Credits : MonoBehaviour
             currentFadeTime += Time.deltaTime;
         }
     }
-}
+} 
